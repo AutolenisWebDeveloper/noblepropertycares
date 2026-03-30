@@ -1,16 +1,9 @@
 import type React from "react"
 import "./globals.css"
 import type { Metadata, Viewport } from "next"
-import { Inter } from "next/font/google"
 import Header from "@/components/header"
 import Footer from "@/components/footer"
 import { getLocalBusinessSchema } from "@/lib/schema"
-
-const inter = Inter({
-  subsets: ["latin"],
-  display: "swap",
-  variable: "--font-inter",
-})
 
 export const viewport: Viewport = {
   width: "device-width",
@@ -102,16 +95,16 @@ export default function RootLayout({
   const structuredData = getLocalBusinessSchema()
 
   return (
-    <html lang="en" className={inter.variable}>
+    <html lang="en">
       <head>
         <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(structuredData) }} />
         <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png" />
         <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png" />
         <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png" />
-        <link rel="mask-icon" href="/safari-pinned-tab.svg" color="#1a472a" />
-        <meta name="msapplication-TileColor" content="#1a472a" />
+        <link rel="mask-icon" href="/safari-pinned-tab.svg" color="#0a1628" />
+        <meta name="msapplication-TileColor" content="#0a1628" />
       </head>
-      <body className={inter.className}>
+      <body className="font-sans antialiased">
         <a
           href="#main-content"
           className="sr-only focus:not-sr-only focus:absolute focus:p-4 focus:bg-white focus:z-50"

@@ -5,64 +5,64 @@
 @layer base {
   :root {
     --background: 0 0% 100%;
-    --foreground: 222.2 84% 4.9%;
+    --foreground: 222 47% 11%;
 
     --card: 0 0% 100%;
-    --card-foreground: 222.2 84% 4.9%;
+    --card-foreground: 222 47% 11%;
 
     --popover: 0 0% 100%;
-    --popover-foreground: 222.2 84% 4.9%;
+    --popover-foreground: 222 47% 11%;
 
-    --primary: 142 70% 13%;
+    --primary: 215 50% 10%;
     --primary-foreground: 210 40% 98%;
 
-    --secondary: 122 53% 49%;
-    --secondary-foreground: 222.2 47.4% 11.2%;
+    --secondary: 210 40% 96%;
+    --secondary-foreground: 222 47% 11%;
 
-    --muted: 210 40% 96.1%;
-    --muted-foreground: 215.4 16.3% 46.9%;
+    --muted: 210 40% 96%;
+    --muted-foreground: 215 16% 47%;
 
-    --accent: 210 40% 96.1%;
-    --accent-foreground: 222.2 47.4% 11.2%;
+    --accent: 152 60% 36%;
+    --accent-foreground: 0 0% 100%;
 
-    --destructive: 0 84.2% 60.2%;
+    --destructive: 0 84% 60%;
     --destructive-foreground: 210 40% 98%;
 
-    --border: 214.3 31.8% 91.4%;
-    --input: 214.3 31.8% 91.4%;
-    --ring: 222.2 84% 4.9%;
+    --border: 214 32% 91%;
+    --input: 214 32% 91%;
+    --ring: 215 50% 10%;
 
     --radius: 0.5rem;
   }
 
   .dark {
-    --background: 222.2 84% 4.9%;
+    --background: 222 47% 5%;
     --foreground: 210 40% 98%;
 
-    --card: 222.2 84% 4.9%;
+    --card: 222 47% 7%;
     --card-foreground: 210 40% 98%;
 
-    --popover: 222.2 84% 4.9%;
+    --popover: 222 47% 7%;
     --popover-foreground: 210 40% 98%;
 
-    --primary: 142 70% 13%;
-    --primary-foreground: 222.2 47.4% 11.2%;
+    --primary: 215 50% 10%;
+    --primary-foreground: 210 40% 98%;
 
-    --secondary: 122 53% 49%;
+    --secondary: 217 33% 17%;
     --secondary-foreground: 210 40% 98%;
 
-    --muted: 217.2 32.6% 17.5%;
-    --muted-foreground: 215 20.2% 65.1%;
+    --muted: 217 33% 17%;
+    --muted-foreground: 215 20% 65%;
 
-    --accent: 217.2 32.6% 17.5%;
-    --accent-foreground: 210 40% 98%;
+    --accent: 152 60% 36%;
+    --accent-foreground: 0 0% 100%;
 
-    --destructive: 0 62.8% 30.6%;
+    --destructive: 0 63% 31%;
     --destructive-foreground: 210 40% 98%;
 
-    --border: 217.2 32.6% 17.5%;
-    --input: 217.2 32.6% 17.5%;
-    --ring: 212.7 26.8% 83.9%;
+    --border: 217 33% 17%;
+    --input: 217 33% 17%;
+    --ring: 213 27% 84%;
   }
 }
 
@@ -72,42 +72,78 @@
   }
   body {
     @apply bg-background text-foreground;
+    font-feature-settings: "cv02", "cv03", "cv04", "cv11";
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
   }
 
-  /* Improve focus styles for better accessibility */
   :focus-visible {
-    @apply outline-none ring-2 ring-primary ring-offset-2;
+    @apply outline-none ring-2 ring-ring ring-offset-2 ring-offset-background;
   }
 
-  /* Smooth scrolling for anchor links */
   html {
     scroll-behavior: smooth;
     -webkit-tap-highlight-color: transparent;
   }
 
-  /* Required field indicator */
   .required-field::after {
     content: "*";
-    color: rgb(239, 68, 68);
-    margin-left: 0.25rem;
+    @apply text-destructive ml-1;
+  }
+
+  h1, h2, h3, h4, h5, h6 {
+    @apply tracking-tight;
   }
 }
 
-/* Hero section background */
-.hero-section {
-  background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url("/hero-bg.jpg");
-  background-size: cover;
-  background-position: center;
+/* Premium animations */
+@keyframes fade-up {
+  from {
+    opacity: 0;
+    transform: translateY(16px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
 }
 
-/* Service card hover effects */
-.service-card {
-  transition: all 0.3s ease;
+@keyframes fade-in {
+  from { opacity: 0; }
+  to { opacity: 1; }
 }
 
-.service-card:hover {
-  transform: translateY(-5px);
-  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+@keyframes subtle-pulse {
+  0%, 100% { opacity: 1; }
+  50% { opacity: 0.85; }
+}
+
+.animate-fade-up {
+  animation: fade-up 0.5s ease-out forwards;
+}
+
+.animate-fade-in {
+  animation: fade-in 0.4s ease-out forwards;
+}
+
+/* Staggered animation delays */
+.stagger-1 { animation-delay: 0.1s; }
+.stagger-2 { animation-delay: 0.2s; }
+.stagger-3 { animation-delay: 0.3s; }
+.stagger-4 { animation-delay: 0.4s; }
+
+/* Premium card hover */
+.premium-card {
+  @apply transition-all duration-300 ease-out;
+}
+
+.premium-card:hover {
+  @apply shadow-lg -translate-y-0.5;
+}
+
+/* Glass effect */
+.glass {
+  @apply bg-white/80 backdrop-blur-xl;
 }
 
 /* Calendar fixes */
@@ -160,12 +196,12 @@
 .rdp-day_selected,
 .rdp-day_selected:focus-visible,
 .rdp-day_selected:hover {
-  background-color: #1a472a !important;
+  background-color: hsl(215 50% 10%) !important;
   color: white !important;
 }
 
 .rdp-button:hover:not([disabled]):not(.rdp-day_selected) {
-  background-color: rgba(26, 71, 42, 0.1);
+  background-color: hsl(215 50% 10% / 0.08);
 }
 
 /* Fix for popover content */
@@ -177,7 +213,6 @@
   display: none;
 }
 
-/* Popover positioning fixes */
 .popover-content-calendar {
   width: auto !important;
   min-width: 300px;
@@ -188,37 +223,19 @@ section[id] {
   scroll-margin-top: 80px;
 }
 
-/* Responsive image containers */
-.image-container {
-  position: relative;
-  width: 100%;
-  height: 0;
-  padding-bottom: 56.25%; /* 16:9 aspect ratio */
-  overflow: hidden;
-}
-
-.image-container img {
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
-}
-
 /* Fix for mobile overflow issues */
 .overflow-x-hidden {
   overflow-x: hidden;
 }
 
 /* Improve form validation styles */
-input:invalid,
-textarea:invalid,
-select:invalid {
-  border-color: rgb(239, 68, 68);
+input:invalid:not(:placeholder-shown),
+textarea:invalid:not(:placeholder-shown),
+select:invalid:not(:placeholder-shown) {
+  @apply border-destructive;
 }
 
-/* Improve accessibility for screen readers */
+/* Screen reader only */
 .sr-only {
   position: absolute;
   width: 1px;
@@ -231,50 +248,15 @@ select:invalid {
   border-width: 0;
 }
 
-/* Fix for mobile menu */
+/* Mobile menu */
 .mobile-menu {
   max-height: calc(100vh - 64px);
   overflow-y: auto;
 }
 
-/* Fix for iframe aspect ratio */
-.aspect-w-16 {
-  position: relative;
-  padding-bottom: 56.25%;
-  height: 0;
-}
-
-.aspect-w-16 iframe {
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-}
-
-/* Prevent layout shifts during image loading */
+/* Prevent layout shifts */
 img {
   transition: opacity 0.3s ease;
-}
-
-img.loading {
-  opacity: 0;
-}
-
-img.loaded {
-  opacity: 1;
-}
-
-/* Fix for Safari flexbox gap issues */
-@supports not (gap: 1rem) {
-  .flex,
-  .grid {
-    margin: -0.5rem;
-  }
-  .flex > *,
-  .grid > * {
-    margin: 0.5rem;
-  }
 }
 
 /* Print styles */
@@ -282,11 +264,9 @@ img.loaded {
   .no-print {
     display: none !important;
   }
-
   body {
     font-size: 12pt;
   }
-
   a[href]:after {
     content: " (" attr(href) ")";
   }
