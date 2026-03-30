@@ -155,7 +155,7 @@ const blogPosts: BlogPost[] = [
         </ul>
 
         <p>
-          At Noble Property Care, we specialize in rental property landscaping throughout Royal Palm Beach and
+          At Noble Property Care, we specialize in rental property landscaping throughout Lake Worth and
           surrounding areas. Our comprehensive services ensure your properties maintain attractive, well-maintained
           landscapes year-round, enhancing their value and appeal to quality tenants.
         </p>
@@ -234,7 +234,7 @@ const blogPosts: BlogPost[] = [
         </p>
 
         <p>
-          For professional commercial property maintenance services in Royal Palm Beach and surrounding areas, contact
+          For professional commercial property maintenance services in Lake Worth and surrounding areas, contact
           Noble Property Care. Our experienced team provides comprehensive maintenance solutions tailored to your
           property's specific needs.
         </p>
@@ -477,7 +477,7 @@ const blogPosts: BlogPost[] = [
 
         <p>
           At Noble Property Care, we specialize in developing and implementing customized preventative maintenance
-          programs for property owners in Royal Palm Beach and surrounding areas. Our comprehensive approach helps
+          programs for property owners in Lake Worth and surrounding areas. Our comprehensive approach helps
           protect your investment while reducing your total cost of ownership.
         </p>
 
@@ -653,7 +653,7 @@ const blogPosts: BlogPost[] = [
 
         <p>
           At Noble Property Care, we offer specialized hurricane preparedness and response services for rental property
-          owners in Royal Palm Beach and surrounding areas. Our team ensures your properties are properly protected
+          owners in Lake Worth and surrounding areas. Our team ensures your properties are properly protected
           before storms and quickly restored afterward, minimizing downtime and financial impact.
         </p>
 

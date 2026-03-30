@@ -111,7 +111,7 @@ export default function Footer() {
             <ul className="space-y-3 text-sm sm:text-base">
               <li className="flex items-start">
                 <MapPin className="mr-2 h-5 w-5 flex-shrink-0 text-gray-300 mt-1" aria-hidden="true" />
-                <span>11987 Southern Blvd. #1064, Royal Palm Beach, FL 33411</span>
+                <span>3280 Lake Worth Rd #2, Lake Worth, FL 33461</span>
               </li>
               <li className="flex items-center">
                 <Phone className="mr-2 h-5 w-5 flex-shrink-0 text-gray-300" aria-hidden="true" />

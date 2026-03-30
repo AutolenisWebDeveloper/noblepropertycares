@@ -16,7 +16,7 @@ export const metadata: Metadata = {
     "landscaping tips",
     "property management advice",
     "cleaning guides",
-    "Royal Palm Beach property blog",
+    "Lake Worth property blog",
   ],
   alternates: {
     canonical: "/blog",

@@ -8,14 +8,14 @@ import { getServiceSchema, getBreadcrumbSchema } from "@/lib/schema"
 export const metadata: Metadata = {
   title: "Professional Property Care Services | Landscaping, Maintenance & Cleaning",
   description:
-    "Explore our comprehensive property care services including rental property landscaping, commercial maintenance, janitorial cleaning, and residential property management in Royal Palm Beach, FL.",
+    "Explore our comprehensive property care services including rental property landscaping, commercial maintenance, janitorial cleaning, and residential property management in Lake Worth, FL.",
   keywords: [
     "property maintenance services",
     "rental property landscaping",
     "commercial property maintenance",
     "janitorial services",
     "property cleaning",
-    "Royal Palm Beach",
+    "Lake Worth",
   ],
   alternates: {
     canonical: "/services",
@@ -23,7 +23,7 @@ export const metadata: Metadata = {
   openGraph: {
     title: "Professional Property Care Services | Landscaping, Maintenance & Cleaning",
     description:
-      "Explore our comprehensive property care services including rental property landscaping, commercial maintenance, janitorial cleaning, and residential property management in Royal Palm Beach, FL.",
+      "Explore our comprehensive property care services including rental property landscaping, commercial maintenance, janitorial cleaning, and residential property management in Lake Worth, FL.",
     url: "https://noblepropertycares.com/services",
   },
 }

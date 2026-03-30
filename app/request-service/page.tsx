@@ -10,7 +10,7 @@ export const metadata: Metadata = {
     "property maintenance request",
     "landscaping services request",
     "cleaning services request",
-    "Royal Palm Beach property maintenance",
+    "Lake Worth property maintenance",
   ],
   alternates: {
     canonical: "/request-service",
