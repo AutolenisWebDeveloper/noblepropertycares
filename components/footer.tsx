@@ -25,7 +25,7 @@ export default function Footer() {
                   <ArrowRight className="ml-2 h-4 w-4" />
                 </Link>
               </Button>
-              <Button asChild size="lg" variant="outline" className="border-white/30 text-white hover:bg-white/10 rounded-lg font-medium">
+              <Button asChild size="lg" className="border border-white/30 bg-transparent text-white hover:bg-white/10 rounded-lg font-medium">
                 <Link href="/contact">Contact Us</Link>
               </Button>
             </div>
