@@ -1,7 +1,7 @@
 import Image from "next/image"
 import Link from "next/link"
 import { Button } from "@/components/ui/button"
-import { ArrowRight, Shield, Clock, Award, Leaf, Building2, Sparkles, Home } from "lucide-react"
+import { ArrowRight, Shield, Clock, Award, Leaf, Building2, Sparkles, Home as HomeIcon } from "lucide-react"
 import type { Metadata } from "next"
 import { getServiceSchema } from "@/lib/schema"
 
@@ -265,7 +265,7 @@ export default function Home() {
                 description: "Focused exclusively on rental property landscaping and commercial maintenance.",
               },
               {
-                icon: Home,
+                icon: HomeIcon,
                 title: "Tailored Service Plans",
                 description: "Customized maintenance programs designed for your specific property needs.",
               },
