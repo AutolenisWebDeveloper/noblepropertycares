@@ -4,6 +4,7 @@ import type { Metadata, Viewport } from "next"
 import { Inter } from "next/font/google"
 import Header from "@/components/header"
 import Footer from "@/components/footer"
+import CopilotWidget from "@/components/copilot/chat-widget"
 import { getLocalBusinessSchema } from "@/lib/schema"
 
 const inter = Inter({
@@ -121,6 +122,7 @@ export default function RootLayout({
         <Header />
         <main id="main-content">{children}</main>
         <Footer />
+        <CopilotWidget />
       </body>
     </html>
   )
