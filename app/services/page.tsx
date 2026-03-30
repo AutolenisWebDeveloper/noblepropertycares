@@ -1,7 +1,7 @@
 import Image from "next/image"
 import Link from "next/link"
 import { Button } from "@/components/ui/button"
-import { CheckCircle, ArrowRight } from "lucide-react"
+import { CheckCircle, ArrowRight, Leaf, Building2, Sparkles, Home } from "lucide-react"
 import type { Metadata } from "next"
 import { getServiceSchema, getBreadcrumbSchema } from "@/lib/schema"
 
@@ -29,7 +29,6 @@ export const metadata: Metadata = {
 }
 
 export default function ServicesPage() {
-  // Structured data for services
   const services = [
     getServiceSchema(
       "Rental Property Landscaping & Outdoor Care",
@@ -53,7 +52,6 @@ export default function ServicesPage() {
     ),
   ]
 
-  // Breadcrumb schema
   const breadcrumb = getBreadcrumbSchema([
     { name: "Home", url: "https://noblepropertycares.com" },
     { name: "Services", url: "https://noblepropertycares.com/services" },
@@ -71,10 +69,13 @@ export default function ServicesPage() {
       {/* Hero Section */}
       <section className="bg-primary py-16 md:py-24">
         <div className="container mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="max-w-3xl">
-            <h1 className="text-4xl font-bold tracking-tight text-white sm:text-5xl">Our Property Care Services</h1>
-            <p className="mt-6 text-xl text-gray-200">
-              Specializing in Rental Property Landscaping and Commercial Property Maintenance
+          <div className="max-w-2xl">
+            <p className="text-sm font-medium uppercase tracking-widest text-white/60 mb-4">Our Services</p>
+            <h1 className="text-4xl font-bold tracking-tight text-white sm:text-5xl">
+              Comprehensive property care solutions
+            </h1>
+            <p className="mt-6 text-lg text-white/70 leading-relaxed">
+              Specialized in rental property landscaping and commercial property maintenance — tailored to protect and enhance your investments.
             </p>
           </div>
         </div>
@@ -83,53 +84,48 @@ export default function ServicesPage() {
       {/* Rental Property Landscaping Section */}
       <section id="landscaping" className="py-16 md:py-24 scroll-mt-20">
         <div className="container mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="grid grid-cols-1 gap-12 md:grid-cols-2 items-center">
-            <div className="order-2 md:order-1">
-              <h2 className="text-3xl font-bold tracking-tight text-gray-900 sm:text-4xl">
+          <div className="grid grid-cols-1 gap-12 lg:gap-16 lg:grid-cols-2 items-center">
+            <div className="order-2 lg:order-1">
+              <div className="inline-flex items-center gap-1.5 px-2.5 py-1 rounded-md bg-primary/5 text-primary text-xs font-medium mb-4">
+                <Leaf className="h-3 w-3" />
+                Landscaping
+              </div>
+              <h2 className="text-3xl font-bold tracking-tight text-foreground sm:text-4xl">
                 Rental Property Landscaping & Outdoor Care
               </h2>
-              <p className="mt-4 text-lg text-gray-600">
-                We provide professional landscaping services to enhance the curb appeal and value of your rental
-                properties. Our expert team ensures your outdoor spaces are beautiful, functional, and well-maintained.
+              <p className="mt-4 text-lg text-muted-foreground leading-relaxed">
+                We provide professional landscaping services to enhance the curb appeal and value of your rental properties. Our expert team ensures your outdoor spaces are beautiful, functional, and well-maintained.
               </p>
               <div className="mt-8 space-y-4">
-                <div className="flex items-start">
-                  <CheckCircle className="h-6 w-6 text-primary flex-shrink-0 mr-2" />
-                  <div>
-                    <p className="font-medium text-gray-900">Lawn Care & Maintenance</p>
-                    <p className="text-gray-600">Regular mowing, edging, and fertilization</p>
+                {[
+                  { title: "Lawn Care & Maintenance", desc: "Regular mowing, edging, and fertilization" },
+                  { title: "Garden Design & Planting", desc: "Seasonal flowers, shrubs, and tree planting" },
+                  { title: "Hardscaping & Outdoor Living", desc: "Patios, walkways, and outdoor amenity areas" },
+                ].map((item) => (
+                  <div key={item.title} className="flex items-start gap-3 p-3 rounded-lg bg-slate-50 border border-slate-100">
+                    <CheckCircle className="h-5 w-5 text-accent flex-shrink-0 mt-0.5" />
+                    <div>
+                      <p className="text-sm font-semibold text-foreground">{item.title}</p>
+                      <p className="text-sm text-muted-foreground">{item.desc}</p>
+                    </div>
                   </div>
-                </div>
-                <div className="flex items-start">
-                  <CheckCircle className="h-6 w-6 text-primary flex-shrink-0 mr-2" />
-                  <div>
-                    <p className="font-medium text-gray-900">Garden Design & Planting</p>
-                    <p className="text-gray-600">Seasonal flowers, shrubs, and tree planting</p>
-                  </div>
-                </div>
-                <div className="flex items-start">
-                  <CheckCircle className="h-6 w-6 text-primary flex-shrink-0 mr-2" />
-                  <div>
-                    <p className="font-medium text-gray-900">Hardscaping & Outdoor Living</p>
-                    <p className="text-gray-600">Patios, walkways, and outdoor amenity areas</p>
-                  </div>
-                </div>
+                ))}
               </div>
               <div className="mt-8">
-                <Button asChild>
+                <Button asChild className="rounded-lg">
                   <Link href="/request-service">
                     Request Service <ArrowRight className="ml-2 h-4 w-4" />
                   </Link>
                 </Button>
               </div>
             </div>
-            <div className="order-1 md:order-2 relative h-[300px] sm:h-[400px] rounded-lg overflow-hidden shadow-xl">
+            <div className="order-1 lg:order-2 relative h-[350px] sm:h-[420px] rounded-2xl overflow-hidden">
               <Image
                 src="https://hebbkx1anhila5yf.public.blob.vercel-storage.com/Landscaping%20%26%20Outdoor%20Care%20%282%29.png-4BPGl5UE4BKnRzjenPF1qSPMJmrqnr.webp"
                 alt="Professional rental property landscaping with modern apartment buildings"
                 fill
                 className="object-cover"
-                sizes="(max-width: 768px) 100vw, 50vw"
+                sizes="(max-width: 1024px) 100vw, 50vw"
               />
             </div>
           </div>
@@ -137,51 +133,46 @@ export default function ServicesPage() {
       </section>
 
       {/* Commercial Property Maintenance Section */}
-      <section id="maintenance" className="bg-gray-50 py-16 md:py-24 scroll-mt-20">
+      <section id="maintenance" className="bg-slate-50/50 py-16 md:py-24 scroll-mt-20">
         <div className="container mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="grid grid-cols-1 gap-12 md:grid-cols-2 items-center">
-            <div className="relative h-[300px] sm:h-[400px] rounded-lg overflow-hidden shadow-xl">
+          <div className="grid grid-cols-1 gap-12 lg:gap-16 lg:grid-cols-2 items-center">
+            <div className="relative h-[350px] sm:h-[420px] rounded-2xl overflow-hidden">
               <Image
                 src="https://hebbkx1anhila5yf.public.blob.vercel-storage.com/Property%20Maintenance%20%26%20Repairs-vXQVsZq8Newu7BtxaCg8MlNspCTd5f.png"
                 alt="Commercial Property Maintenance & Repairs"
                 fill
                 className="object-cover"
-                sizes="(max-width: 768px) 100vw, 50vw"
+                sizes="(max-width: 1024px) 100vw, 50vw"
               />
             </div>
             <div>
-              <h2 className="text-3xl font-bold tracking-tight text-gray-900 sm:text-4xl">
+              <div className="inline-flex items-center gap-1.5 px-2.5 py-1 rounded-md bg-primary/5 text-primary text-xs font-medium mb-4">
+                <Building2 className="h-3 w-3" />
+                Maintenance
+              </div>
+              <h2 className="text-3xl font-bold tracking-tight text-foreground sm:text-4xl">
                 Commercial Property Maintenance & Repairs
               </h2>
-              <p className="mt-4 text-lg text-gray-600">
-                We offer comprehensive maintenance services to keep your commercial properties in top condition. Our
-                team handles everything from routine inspections to complex repairs.
+              <p className="mt-4 text-lg text-muted-foreground leading-relaxed">
+                We offer comprehensive maintenance services to keep your commercial properties in top condition. Our team handles everything from routine inspections to complex repairs.
               </p>
               <div className="mt-8 space-y-4">
-                <div className="flex items-start">
-                  <CheckCircle className="h-6 w-6 text-primary flex-shrink-0 mr-2" />
-                  <div>
-                    <p className="font-medium text-gray-900">Preventative Maintenance</p>
-                    <p className="text-gray-600">Regular inspections and proactive repairs</p>
+                {[
+                  { title: "Preventative Maintenance", desc: "Regular inspections and proactive repairs" },
+                  { title: "Building Systems Upkeep", desc: "HVAC, electrical, and plumbing maintenance" },
+                  { title: "Emergency Repairs", desc: "24/7 response for urgent maintenance issues" },
+                ].map((item) => (
+                  <div key={item.title} className="flex items-start gap-3 p-3 rounded-lg bg-white border border-slate-200/80">
+                    <CheckCircle className="h-5 w-5 text-accent flex-shrink-0 mt-0.5" />
+                    <div>
+                      <p className="text-sm font-semibold text-foreground">{item.title}</p>
+                      <p className="text-sm text-muted-foreground">{item.desc}</p>
+                    </div>
                   </div>
-                </div>
-                <div className="flex items-start">
-                  <CheckCircle className="h-6 w-6 text-primary flex-shrink-0 mr-2" />
-                  <div>
-                    <p className="font-medium text-gray-900">Building Systems Upkeep</p>
-                    <p className="text-gray-600">HVAC, electrical, and plumbing maintenance</p>
-                  </div>
-                </div>
-                <div className="flex items-start">
-                  <CheckCircle className="h-6 w-6 text-primary flex-shrink-0 mr-2" />
-                  <div>
-                    <p className="font-medium text-gray-900">Emergency Repairs</p>
-                    <p className="text-gray-600">24/7 response for urgent maintenance issues</p>
-                  </div>
-                </div>
+                ))}
               </div>
               <div className="mt-8">
-                <Button asChild>
+                <Button asChild className="rounded-lg">
                   <Link href="/request-service">
                     Request Service <ArrowRight className="ml-2 h-4 w-4" />
                   </Link>
@@ -192,54 +183,51 @@ export default function ServicesPage() {
         </div>
       </section>
 
-      {/* Other Services Section */}
+      {/* Additional Services */}
       <section className="py-16 md:py-24">
         <div className="container mx-auto px-4 sm:px-6 lg:px-8">
-          <h2 className="text-3xl font-bold tracking-tight text-gray-900 sm:text-4xl mb-8">Additional Services</h2>
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
+          <div className="max-w-2xl mb-12">
+            <p className="text-sm font-medium uppercase tracking-widest text-muted-foreground mb-3">More Services</p>
+            <h2 className="text-3xl font-bold tracking-tight text-foreground sm:text-4xl">Additional property care solutions</h2>
+          </div>
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
             {/* Cleaning Section */}
-            <div id="cleaning" className="scroll-mt-20">
-              <h3 className="text-2xl font-bold tracking-tight text-gray-900 mb-4">Janitorial & Deep Cleaning</h3>
-              <p className="text-lg text-gray-600 mb-4">
-                We provide professional cleaning services to maintain a healthy environment for residents, employees,
-                and guests.
+            <div id="cleaning" className="scroll-mt-20 p-6 sm:p-8 rounded-2xl border border-slate-200/80 bg-white premium-card">
+              <div className="inline-flex items-center gap-1.5 px-2.5 py-1 rounded-md bg-primary/5 text-primary text-xs font-medium mb-4">
+                <Sparkles className="h-3 w-3" />
+                Cleaning
+              </div>
+              <h3 className="text-xl font-semibold text-foreground mb-3">Janitorial & Deep Cleaning</h3>
+              <p className="text-sm text-muted-foreground leading-relaxed mb-6">
+                Professional cleaning services to maintain a healthy environment for residents, employees, and guests.
               </p>
-              <ul className="space-y-2">
-                <li className="flex items-start">
-                  <CheckCircle className="h-6 w-6 text-primary flex-shrink-0 mr-2" />
-                  <span>Commercial Janitorial Services</span>
-                </li>
-                <li className="flex items-start">
-                  <CheckCircle className="h-6 w-6 text-primary flex-shrink-0 mr-2" />
-                  <span>Residential Deep Cleaning</span>
-                </li>
-                <li className="flex items-start">
-                  <CheckCircle className="h-6 w-6 text-primary flex-shrink-0 mr-2" />
-                  <span>Apartment Complex Cleaning</span>
-                </li>
+              <ul className="space-y-3">
+                {["Commercial Janitorial Services", "Residential Deep Cleaning", "Apartment Complex Cleaning"].map((item) => (
+                  <li key={item} className="flex items-center gap-2.5 text-sm text-foreground">
+                    <CheckCircle className="h-4 w-4 text-accent flex-shrink-0" />
+                    {item}
+                  </li>
+                ))}
               </ul>
             </div>
 
             {/* Residential Maintenance Section */}
-            <div id="residential" className="scroll-mt-20">
-              <h3 className="text-2xl font-bold tracking-tight text-gray-900 mb-4">Residential Property Maintenance</h3>
-              <p className="text-lg text-gray-600 mb-4">
-                We offer comprehensive maintenance services for residential properties to ensure they remain in
-                excellent condition.
+            <div id="residential" className="scroll-mt-20 p-6 sm:p-8 rounded-2xl border border-slate-200/80 bg-white premium-card">
+              <div className="inline-flex items-center gap-1.5 px-2.5 py-1 rounded-md bg-primary/5 text-primary text-xs font-medium mb-4">
+                <Home className="h-3 w-3" />
+                Residential
+              </div>
+              <h3 className="text-xl font-semibold text-foreground mb-3">Residential Property Maintenance</h3>
+              <p className="text-sm text-muted-foreground leading-relaxed mb-6">
+                Comprehensive maintenance services for residential properties to ensure they remain in excellent condition.
               </p>
-              <ul className="space-y-2">
-                <li className="flex items-start">
-                  <CheckCircle className="h-6 w-6 text-primary flex-shrink-0 mr-2" />
-                  <span>Home Repairs and Improvements</span>
-                </li>
-                <li className="flex items-start">
-                  <CheckCircle className="h-6 w-6 text-primary flex-shrink-0 mr-2" />
-                  <span>Seasonal Maintenance</span>
-                </li>
-                <li className="flex items-start">
-                  <CheckCircle className="h-6 w-6 text-primary flex-shrink-0 mr-2" />
-                  <span>Energy Efficiency Upgrades</span>
-                </li>
+              <ul className="space-y-3">
+                {["Home Repairs and Improvements", "Seasonal Maintenance", "Energy Efficiency Upgrades"].map((item) => (
+                  <li key={item} className="flex items-center gap-2.5 text-sm text-foreground">
+                    <CheckCircle className="h-4 w-4 text-accent flex-shrink-0" />
+                    {item}
+                  </li>
+                ))}
               </ul>
             </div>
           </div>
@@ -247,19 +235,26 @@ export default function ServicesPage() {
       </section>
 
       {/* CTA Section */}
-      <section className="bg-primary py-16">
+      <section className="bg-slate-50/50 py-16 md:py-20">
         <div className="container mx-auto px-4 sm:px-6 lg:px-8 text-center">
-          <h2 className="text-3xl font-bold tracking-tight text-white sm:text-4xl">
-            Ready to Experience Professional Property Care?
-          </h2>
-          <p className="mt-4 text-xl text-gray-200 max-w-3xl mx-auto">
-            Contact us today to discuss your property maintenance and management needs. We're here to help you protect
-            and enhance the value of your property.
-          </p>
-          <div className="mt-8">
-            <Button asChild size="lg" className="bg-white text-primary hover:bg-gray-100">
-              <Link href="/request-service">Request Service Now</Link>
-            </Button>
+          <div className="max-w-2xl mx-auto">
+            <h2 className="text-3xl font-bold tracking-tight text-foreground sm:text-4xl">
+              Ready for professional property care?
+            </h2>
+            <p className="mt-4 text-lg text-muted-foreground">
+              Contact us today to discuss your property maintenance needs. We provide customized solutions that protect and enhance the value of your property.
+            </p>
+            <div className="mt-8 flex flex-col sm:flex-row gap-3 justify-center">
+              <Button asChild size="lg" className="rounded-lg bg-primary hover:bg-primary/90 text-white">
+                <Link href="/request-service">
+                  Request Service
+                  <ArrowRight className="ml-2 h-4 w-4" />
+                </Link>
+              </Button>
+              <Button asChild size="lg" variant="outline" className="rounded-lg">
+                <Link href="/contact">Contact Us</Link>
+              </Button>
+            </div>
           </div>
         </div>
       </section>

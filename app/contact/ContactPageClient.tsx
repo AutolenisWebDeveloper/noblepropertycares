@@ -4,13 +4,11 @@ import type React from "react"
 
 import { useState, useRef } from "react"
 import { useRouter } from "next/navigation"
-import Image from "next/image"
 import { Button } from "@/components/ui/button"
-import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card"
 import { Input } from "@/components/ui/input"
 import { Label } from "@/components/ui/label"
 import { Textarea } from "@/components/ui/textarea"
-import { Phone, Mail, MapPin, AlertCircle } from "lucide-react"
+import { Phone, Mail, MapPin, AlertCircle, Clock, ArrowRight } from "lucide-react"
 import { sendContactEmail } from "@/app/actions/email-actions"
 
 export default function ContactPageClient() {
@@ -23,13 +21,11 @@ export default function ContactPageClient() {
   const validateForm = (formData: FormData) => {
     const newErrors: Record<string, string> = {}
 
-    // Name validation
     const name = formData.get("name") as string
     if (!name || name.trim() === "") {
       newErrors.name = "Name is required"
     }
 
-    // Email validation
     const email = formData.get("email") as string
     if (!email || email.trim() === "") {
       newErrors.email = "Email is required"
@@ -37,13 +33,11 @@ export default function ContactPageClient() {
       newErrors.email = "Please enter a valid email address"
     }
 
-    // Phone validation
     const phone = formData.get("phone") as string
     if (phone && !/^[0-9\-+$$$$\s]{10,15}$/.test(phone)) {
       newErrors.phone = "Please enter a valid phone number"
     }
 
-    // Message validation
     const message = formData.get("message") as string
     if (!message || message.trim() === "") {
       newErrors.message = "Message is required"
@@ -88,217 +82,188 @@ export default function ContactPageClient() {
       {/* Hero Section */}
       <section className="bg-primary py-16 md:py-24">
         <div className="container mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="max-w-3xl">
-            <h1 className="text-4xl font-bold tracking-tight text-white sm:text-5xl">Contact Us</h1>
-            <p className="mt-6 text-xl text-gray-200">
-              Get in touch with our team for property maintenance and management services
+          <div className="max-w-2xl">
+            <p className="text-sm font-medium uppercase tracking-widest text-white/60 mb-4">Contact</p>
+            <h1 className="text-4xl font-bold tracking-tight text-white sm:text-5xl">Get in touch</h1>
+            <p className="mt-6 text-lg text-white/70 leading-relaxed">
+              Have questions about our property maintenance services? Our team is here to help.
             </p>
           </div>
         </div>
       </section>
 
-      {/* Contact Form Section */}
+      {/* Contact Section */}
       <section className="py-16 md:py-24">
         <div className="container mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="grid grid-cols-1 gap-12 lg:grid-cols-2">
+          <div className="grid grid-cols-1 gap-12 lg:gap-16 lg:grid-cols-5">
             {/* Contact Information */}
-            <div>
-              <h2 className="text-3xl font-bold tracking-tight text-gray-900 sm:text-4xl mb-6">Get In Touch</h2>
-              <p className="text-lg text-gray-600 mb-8">
-                Have questions about our property maintenance services? Need a quote for your property? Contact us today
-                and our team will be happy to assist you.
+            <div className="lg:col-span-2">
+              <h2 className="text-2xl font-bold tracking-tight text-foreground mb-2">Contact Information</h2>
+              <p className="text-sm text-muted-foreground mb-8">
+                Reach out via phone, email, or fill out the form and we&apos;ll respond within 24 hours.
               </p>
 
               <div className="space-y-6">
-                <div className="flex items-start">
-                  <div className="flex-shrink-0">
-                    <div className="flex h-12 w-12 items-center justify-center rounded-full bg-primary/10 text-primary">
-                      <Phone className="h-6 w-6" aria-hidden="true" />
-                    </div>
-                  </div>
-                  <div className="ml-4">
-                    <h3 className="text-lg font-medium text-gray-900">Phone</h3>
-                    <p className="mt-1 text-gray-600">
-                      <a href="tel:+19548167872" className="hover:text-primary transition-colors">
+                {[
+                  {
+                    icon: Phone,
+                    title: "Phone",
+                    content: (
+                      <a href="tel:+19548167872" className="text-sm text-foreground hover:text-primary transition-colors font-medium">
                         +1 954-816-7872
                       </a>
-                    </p>
-                    <p className="mt-1 text-sm text-gray-500">Monday-Friday, 8am-6pm ET</p>
-                  </div>
-                </div>
-
-                <div className="flex items-start">
-                  <div className="flex-shrink-0">
-                    <div className="flex h-12 w-12 items-center justify-center rounded-full bg-primary/10 text-primary">
-                      <Mail className="h-6 w-6" aria-hidden="true" />
-                    </div>
-                  </div>
-                  <div className="ml-4">
-                    <h3 className="text-lg font-medium text-gray-900">Email</h3>
-                    <p className="mt-1 text-gray-600">
-                      <a
-                        href="mailto:frantz@noblepropertycares.com"
-                        className="hover:text-primary transition-colors break-all"
-                      >
+                    ),
+                    sub: "Monday–Friday, 8am–6pm ET",
+                  },
+                  {
+                    icon: Mail,
+                    title: "Email",
+                    content: (
+                      <a href="mailto:frantz@noblepropertycares.com" className="text-sm text-foreground hover:text-primary transition-colors font-medium break-all">
                         frantz@noblepropertycares.com
                       </a>
-                    </p>
-                    <p className="mt-1 text-sm text-gray-500">We'll respond as soon as possible</p>
-                  </div>
-                </div>
-
-                <div className="flex items-start">
-                  <div className="flex-shrink-0">
-                    <div className="flex h-12 w-12 items-center justify-center rounded-full bg-primary/10 text-primary">
-                      <MapPin className="h-6 w-6" aria-hidden="true" />
+                    ),
+                    sub: "We'll respond within 24 hours",
+                  },
+                  {
+                    icon: MapPin,
+                    title: "Office",
+                    content: <p className="text-sm text-foreground font-medium">11987 Southern Blvd. #1064, Royal Palm Beach, FL 33411</p>,
+                    sub: "Serving Royal Palm Beach and surrounding areas",
+                  },
+                  {
+                    icon: Clock,
+                    title: "Business Hours",
+                    content: <p className="text-sm text-foreground font-medium">Mon–Fri: 8:00am – 6:00pm ET</p>,
+                    sub: "Emergency support available 24/7",
+                  },
+                ].map((item) => (
+                  <div key={item.title} className="flex gap-4">
+                    <div className="flex-shrink-0 h-10 w-10 rounded-lg bg-primary/5 flex items-center justify-center">
+                      <item.icon className="h-5 w-5 text-primary" aria-hidden="true" />
+                    </div>
+                    <div>
+                      <p className="text-xs font-medium uppercase tracking-wider text-muted-foreground mb-1">{item.title}</p>
+                      {item.content}
+                      <p className="text-xs text-muted-foreground mt-1">{item.sub}</p>
                     </div>
                   </div>
-                  <div className="ml-4">
-                    <h3 className="text-lg font-medium text-gray-900">Office</h3>
-                    <p className="mt-1 text-gray-600">11987 Southern Blvd. #1064</p>
-                    <p className="text-gray-600">Royal Palm Beach, FL 33411</p>
-                    <p className="mt-1 text-sm text-gray-500">Serving Royal Palm Beach and surrounding areas</p>
-                  </div>
-                </div>
-              </div>
-
-              <div className="mt-12">
-                <div className="relative h-[300px] rounded-lg overflow-hidden shadow-xl">
-                  <Image
-                    src="https://hebbkx1anhila5yf.public.blob.vercel-storage.com/Contact%20Us-oQcwpst9XKNAoTWS1kcGTu2k5SSLBs.png"
-                    alt="Noble Property Care customer service team"
-                    fill
-                    className="object-cover"
-                    sizes="(max-width: 768px) 100vw, 50vw"
-                  />
-                </div>
+                ))}
               </div>
             </div>
 
             {/* Contact Form */}
-            <div>
-              <Card>
-                <CardHeader>
-                  <CardTitle>Send Us a Message</CardTitle>
-                  <CardDescription>
-                    Fill out the form below and we'll get back to you as soon as possible.
-                  </CardDescription>
-                </CardHeader>
-                <CardContent>
-                  {formError && (
-                    <div className="mb-4 p-3 bg-red-50 border border-red-200 text-red-700 rounded-md flex items-start">
-                      <AlertCircle className="h-5 w-5 mr-2 mt-0.5 flex-shrink-0" aria-hidden="true" />
-                      <span>{formError}</span>
-                    </div>
-                  )}
+            <div className="lg:col-span-3">
+              <div className="rounded-2xl border border-slate-200/80 bg-white p-6 sm:p-8">
+                <h3 className="text-lg font-semibold text-foreground mb-1">Send us a message</h3>
+                <p className="text-sm text-muted-foreground mb-6">
+                  Fill out the form below and we&apos;ll get back to you as soon as possible.
+                </p>
 
-                  <form ref={formRef} onSubmit={handleSubmit} noValidate className="space-y-6">
-                    <div className="space-y-2">
-                      <Label htmlFor="name" className="required-field">
-                        Name
-                      </Label>
+                {formError && (
+                  <div className="mb-6 p-3 bg-red-50 border border-red-100 text-red-700 rounded-lg flex items-start text-sm">
+                    <AlertCircle className="h-4 w-4 mr-2 mt-0.5 flex-shrink-0" aria-hidden="true" />
+                    <span>{formError}</span>
+                  </div>
+                )}
+
+                <form ref={formRef} onSubmit={handleSubmit} noValidate className="space-y-5">
+                  <div className="space-y-1.5">
+                    <Label htmlFor="name" className="text-sm font-medium required-field">Name</Label>
+                    <Input
+                      id="name"
+                      name="name"
+                      placeholder="Your name"
+                      required
+                      aria-required="true"
+                      aria-invalid={!!errors.name}
+                      aria-describedby={errors.name ? "name-error" : undefined}
+                      className={`h-11 rounded-lg ${errors.name ? "border-red-500" : ""}`}
+                    />
+                    {errors.name && (
+                      <p id="name-error" className="text-xs text-red-500">{errors.name}</p>
+                    )}
+                  </div>
+
+                  <div className="grid grid-cols-1 gap-5 sm:grid-cols-2">
+                    <div className="space-y-1.5">
+                      <Label htmlFor="email" className="text-sm font-medium required-field">Email</Label>
                       <Input
-                        id="name"
-                        name="name"
-                        placeholder="Your name"
+                        id="email"
+                        name="email"
+                        type="email"
+                        placeholder="you@example.com"
                         required
                         aria-required="true"
-                        aria-invalid={!!errors.name}
-                        aria-describedby={errors.name ? "name-error" : undefined}
-                        className={errors.name ? "border-red-500" : ""}
+                        aria-invalid={!!errors.email}
+                        aria-describedby={errors.email ? "email-error" : undefined}
+                        className={`h-11 rounded-lg ${errors.email ? "border-red-500" : ""}`}
                       />
-                      {errors.name && (
-                        <p id="name-error" className="text-sm text-red-500 mt-1">
-                          {errors.name}
-                        </p>
+                      {errors.email && (
+                        <p id="email-error" className="text-xs text-red-500">{errors.email}</p>
                       )}
                     </div>
 
-                    <div className="grid grid-cols-1 gap-6 sm:grid-cols-2">
-                      <div className="space-y-2">
-                        <Label htmlFor="email" className="required-field">
-                          Email
-                        </Label>
-                        <Input
-                          id="email"
-                          name="email"
-                          type="email"
-                          placeholder="Your email"
-                          required
-                          aria-required="true"
-                          aria-invalid={!!errors.email}
-                          aria-describedby={errors.email ? "email-error" : undefined}
-                          className={errors.email ? "border-red-500" : ""}
-                        />
-                        {errors.email && (
-                          <p id="email-error" className="text-sm text-red-500 mt-1">
-                            {errors.email}
-                          </p>
-                        )}
-                      </div>
-
-                      <div className="space-y-2">
-                        <Label htmlFor="phone">Phone (optional)</Label>
-                        <Input
-                          id="phone"
-                          name="phone"
-                          type="tel"
-                          placeholder="Your phone number"
-                          aria-invalid={!!errors.phone}
-                          aria-describedby={errors.phone ? "phone-error" : undefined}
-                          className={errors.phone ? "border-red-500" : ""}
-                        />
-                        {errors.phone && (
-                          <p id="phone-error" className="text-sm text-red-500 mt-1">
-                            {errors.phone}
-                          </p>
-                        )}
-                      </div>
-                    </div>
-
-                    <div className="space-y-2">
-                      <Label htmlFor="service">Service Interested In</Label>
-                      <select
-                        id="service"
-                        name="service"
-                        className="flex h-10 w-full rounded-md border border-input bg-background px-3 py-2 text-sm ring-offset-background file:border-0 file:bg-transparent file:text-sm file:font-medium placeholder:text-muted-foreground focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 disabled:cursor-not-allowed disabled:opacity-50"
-                      >
-                        <option value="General Inquiry">General Inquiry</option>
-                        <option value="Rental Property Landscaping">Rental Property Landscaping</option>
-                        <option value="Commercial Property Maintenance">Commercial Property Maintenance</option>
-                        <option value="Janitorial & Cleaning">Janitorial & Cleaning</option>
-                        <option value="Residential Maintenance">Residential Maintenance</option>
-                      </select>
-                    </div>
-
-                    <div className="space-y-2">
-                      <Label htmlFor="message" className="required-field">
-                        Message
-                      </Label>
-                      <Textarea
-                        id="message"
-                        name="message"
-                        placeholder="How can we help you?"
-                        rows={5}
-                        required
-                        aria-required="true"
-                        aria-invalid={!!errors.message}
-                        aria-describedby={errors.message ? "message-error" : undefined}
-                        className={errors.message ? "border-red-500" : ""}
+                    <div className="space-y-1.5">
+                      <Label htmlFor="phone" className="text-sm font-medium">Phone <span className="text-muted-foreground font-normal">(optional)</span></Label>
+                      <Input
+                        id="phone"
+                        name="phone"
+                        type="tel"
+                        placeholder="(555) 000-0000"
+                        aria-invalid={!!errors.phone}
+                        aria-describedby={errors.phone ? "phone-error" : undefined}
+                        className={`h-11 rounded-lg ${errors.phone ? "border-red-500" : ""}`}
                       />
-                      {errors.message && (
-                        <p id="message-error" className="text-sm text-red-500 mt-1">
-                          {errors.message}
-                        </p>
+                      {errors.phone && (
+                        <p id="phone-error" className="text-xs text-red-500">{errors.phone}</p>
                       )}
                     </div>
+                  </div>
 
-                    <Button type="submit" className="w-full" disabled={isSubmitting}>
-                      {isSubmitting ? "Sending..." : "Send Message"}
-                    </Button>
-                  </form>
-                </CardContent>
-              </Card>
+                  <div className="space-y-1.5">
+                    <Label htmlFor="service" className="text-sm font-medium">Service Interested In</Label>
+                    <select
+                      id="service"
+                      name="service"
+                      className="flex h-11 w-full rounded-lg border border-input bg-background px-3 py-2 text-sm ring-offset-background focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2"
+                    >
+                      <option value="General Inquiry">General Inquiry</option>
+                      <option value="Rental Property Landscaping">Rental Property Landscaping</option>
+                      <option value="Commercial Property Maintenance">Commercial Property Maintenance</option>
+                      <option value="Janitorial & Cleaning">Janitorial & Cleaning</option>
+                      <option value="Residential Maintenance">Residential Maintenance</option>
+                    </select>
+                  </div>
+
+                  <div className="space-y-1.5">
+                    <Label htmlFor="message" className="text-sm font-medium required-field">Message</Label>
+                    <Textarea
+                      id="message"
+                      name="message"
+                      placeholder="Tell us about your property and what services you're interested in..."
+                      rows={5}
+                      required
+                      aria-required="true"
+                      aria-invalid={!!errors.message}
+                      aria-describedby={errors.message ? "message-error" : undefined}
+                      className={`rounded-lg resize-none ${errors.message ? "border-red-500" : ""}`}
+                    />
+                    {errors.message && (
+                      <p id="message-error" className="text-xs text-red-500">{errors.message}</p>
+                    )}
+                  </div>
+
+                  <Button type="submit" className="w-full h-11 rounded-lg bg-primary hover:bg-primary/90 text-white font-medium" disabled={isSubmitting}>
+                    {isSubmitting ? "Sending..." : (
+                      <>
+                        Send Message
+                        <ArrowRight className="ml-2 h-4 w-4" />
+                      </>
+                    )}
+                  </Button>
+                </form>
+              </div>
             </div>
           </div>
         </div>
