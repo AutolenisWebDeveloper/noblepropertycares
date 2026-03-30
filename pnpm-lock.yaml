@@ -123,8 +123,8 @@ importers:
         specifier: ^0.4.4
         version: 0.4.6(react-dom@19.2.4(react@19.2.4))(react@19.2.4)
       nodemailer:
-        specifier: ^6.9.9
-        version: 6.10.1
+        specifier: ^7.0.13
+        version: 7.0.13
       react:
         specifier: ^19
         version: 19.2.4
@@ -1493,8 +1493,8 @@ packages:
   node-releases@2.0.36:
     resolution: {integrity: sha512-TdC8FSgHz8Mwtw9g5L4gR/Sh9XhSP/0DEkQxfEFXOpiul5IiHgHan2VhYYb6agDSfp4KuvltmGApc8HMgUrIkA==}
 
-  nodemailer@6.10.1:
-    resolution: {integrity: sha512-Z+iLaBGVaSjbIzQ4pX6XV41HrooLsQ10ZWPUehGmuantvzWoDVBnmsdUcOIDM1t+yPor5pDhVlDESgOMEGxhHA==}
+  nodemailer@7.0.13:
+    resolution: {integrity: sha512-PNDFSJdP+KFgdsG3ZzMXCgquO7I6McjY2vlqILjtJd0hy8wEvtugS9xKRF2NWlPNGxvLCXlTNIae4serI7dinw==}
     engines: {node: '>=6.0.0'}
 
   nopt@7.2.1:
@@ -3206,7 +3206,7 @@ snapshots:
 
   node-releases@2.0.36: {}
 
-  nodemailer@6.10.1: {}
+  nodemailer@7.0.13: {}
 
   nopt@7.2.1:
     dependencies:
