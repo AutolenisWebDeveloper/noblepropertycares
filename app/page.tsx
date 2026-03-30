@@ -19,7 +19,7 @@ export const metadata: Metadata = {
   },
 }
 
-export default function HomePage() {
+export default function Home() {
   const maintenanceService = getServiceSchema(
     "Property Maintenance & Repairs",
     "Comprehensive maintenance services for commercial properties, including regular inspections, repairs, and upgrades to ensure your business premises are always in top condition.",
