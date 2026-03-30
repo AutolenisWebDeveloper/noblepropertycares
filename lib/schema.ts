@@ -10,16 +10,16 @@ export const getLocalBusinessSchema = () => {
     telephone: "+19548167872",
     address: {
       "@type": "PostalAddress",
-      streetAddress: "11987 Southern Blvd. #1064",
-      addressLocality: "Royal Palm Beach",
+      streetAddress: "3280 Lake Worth Rd #2",
+      addressLocality: "Lake Worth",
       addressRegion: "FL",
-      postalCode: "33411",
+      postalCode: "33461",
       addressCountry: "US",
     },
     geo: {
       "@type": "GeoCoordinates",
-      latitude: 26.6830717,
-      longitude: -80.2240138,
+      latitude: 26.6172911,
+      longitude: -80.0938834,
     },
     openingHoursSpecification: [
       {
@@ -63,8 +63,8 @@ export const getServiceSchema = (name: string, description: string, url: string)
       "@type": "GeoCircle",
       geoMidpoint: {
         "@type": "GeoCoordinates",
-        latitude: 26.6830717,
-        longitude: -80.2240138,
+        latitude: 26.6172911,
+        longitude: -80.0938834,
       },
       geoRadius: "30mi",
     },

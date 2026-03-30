@@ -17,13 +17,13 @@ interface MetaTagsProps {
 
 export default function MetaTags({
   title = "Noble Property Care LLC - Property Maintenance & Management",
-  description = "Your trusted partner in property maintenance and management services for residential homes, apartment complexes, and commercial properties in Royal Palm Beach, FL.",
+  description = "Your trusted partner in property maintenance and management services for residential homes, apartment complexes, and commercial properties in Lake Worth, FL.",
   canonicalUrl,
   ogImage = "https://hebbkx1anhila5yf.public.blob.vercel-storage.com/About%20Us-Mvb5N3lo41ZffYu6RhA4Q6I8VQN6NG.png",
   ogType = "website",
   twitterCard = "summary_large_image",
   noIndex = false,
-  keywords = "property maintenance, property management, rental property landscaping, commercial property maintenance, Royal Palm Beach, Florida",
+  keywords = "property maintenance, property management, rental property landscaping, commercial property maintenance, Lake Worth, Florida",
   structuredData,
 }: MetaTagsProps) {
   const router = useRouter()

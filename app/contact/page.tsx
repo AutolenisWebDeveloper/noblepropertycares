@@ -4,11 +4,11 @@ import ContactPageClient from "./ContactPageClient"
 export const metadata: Metadata = {
   title: "Contact Noble Property Care | Request Property Maintenance Services",
   description:
-    "Contact Noble Property Care for professional property maintenance and management services in Royal Palm Beach, FL. Get in touch with our team for a consultation or service request.",
+    "Contact Noble Property Care for professional property maintenance and management services in Lake Worth, FL. Get in touch with our team for a consultation or service request.",
   keywords: [
     "contact Noble Property Care",
     "property maintenance contact",
-    "Royal Palm Beach property services",
+    "Lake Worth property services",
     "request property maintenance",
     "property care consultation",
   ],
@@ -18,7 +18,7 @@ export const metadata: Metadata = {
   openGraph: {
     title: "Contact Noble Property Care | Request Property Maintenance Services",
     description:
-      "Contact Noble Property Care for professional property maintenance and management services in Royal Palm Beach, FL. Get in touch with our team for a consultation or service request.",
+      "Contact Noble Property Care for professional property maintenance and management services in Lake Worth, FL. Get in touch with our team for a consultation or service request.",
     url: "https://noblepropertycares.com/contact",
   },
   // schema: getBreadcrumbSchema([

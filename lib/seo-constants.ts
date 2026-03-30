@@ -2,14 +2,14 @@ export const SEO_CONSTANTS = {
   SITE_NAME: "Noble Property Care LLC",
   SITE_URL: "https://noblepropertycares.com",
   SITE_DESCRIPTION:
-    "Your trusted partner in property maintenance and management services for residential homes, apartment complexes, and commercial properties in Royal Palm Beach, FL.",
+    "Your trusted partner in property maintenance and management services for residential homes, apartment complexes, and commercial properties in Lake Worth, FL.",
   DEFAULT_TITLE: "Noble Property Care LLC - Property Maintenance & Management",
   DEFAULT_KEYWORDS: [
     "property maintenance",
     "property management",
     "rental property landscaping",
     "commercial property maintenance",
-    "Royal Palm Beach",
+    "Lake Worth",
     "Florida",
     "property care",
     "landscaping services",
@@ -26,10 +26,10 @@ export const SEO_CONSTANTS = {
   CONTACT_INFO: {
     PHONE: "+19548167872",
     EMAIL: "frantz@noblepropertycares.com",
-    ADDRESS: "11987 Southern Blvd. #1064, Royal Palm Beach, FL 33411",
+    ADDRESS: "3280 Lake Worth Rd #2, Lake Worth, FL 33461",
   },
   GEO_LOCATION: {
-    LATITUDE: 26.6830717,
-    LONGITUDE: -80.2240138,
+    LATITUDE: 26.6172911,
+    LONGITUDE: -80.0938834,
   },
 }

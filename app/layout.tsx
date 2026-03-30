@@ -27,13 +27,13 @@ export const metadata: Metadata = {
     template: "%s | Noble Property Care LLC",
   },
   description:
-    "Your trusted partner in property maintenance and management services for residential homes, apartment complexes, and commercial properties in Royal Palm Beach, FL.",
+    "Your trusted partner in property maintenance and management services for residential homes, apartment complexes, and commercial properties in Lake Worth, FL.",
   keywords: [
     "property maintenance",
     "property management",
     "rental property landscaping",
     "commercial property maintenance",
-    "Royal Palm Beach",
+    "Lake Worth",
     "Florida",
     "property care",
     "landscaping services",
@@ -56,7 +56,7 @@ export const metadata: Metadata = {
     siteName: "Noble Property Care LLC",
     title: "Noble Property Care LLC - Property Maintenance & Management",
     description:
-      "Your trusted partner in property maintenance and management services for residential homes, apartment complexes, and commercial properties in Royal Palm Beach, FL.",
+      "Your trusted partner in property maintenance and management services for residential homes, apartment complexes, and commercial properties in Lake Worth, FL.",
     images: [
       {
         url: "https://hebbkx1anhila5yf.public.blob.vercel-storage.com/About%20Us-Mvb5N3lo41ZffYu6RhA4Q6I8VQN6NG.png",
@@ -70,7 +70,7 @@ export const metadata: Metadata = {
     card: "summary_large_image",
     title: "Noble Property Care LLC - Property Maintenance & Management",
     description:
-      "Your trusted partner in property maintenance and management services for residential homes, apartment complexes, and commercial properties in Royal Palm Beach, FL.",
+      "Your trusted partner in property maintenance and management services for residential homes, apartment complexes, and commercial properties in Lake Worth, FL.",
     images: ["https://hebbkx1anhila5yf.public.blob.vercel-storage.com/About%20Us-Mvb5N3lo41ZffYu6RhA4Q6I8VQN6NG.png"],
     creator: "@noblepropertycare",
   },

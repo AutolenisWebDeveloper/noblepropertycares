@@ -12,7 +12,7 @@ export const COMPANY = {
   phone: "(954) 816-7872",
   phoneRaw: "+19548167872",
   email: "frantz@noblepropertycares.com",
-  address: "11987 Southern Blvd. #1064, Royal Palm Beach, FL 33411",
+  address: "3280 Lake Worth Rd #2, Lake Worth, FL 33461",
   website: "https://noblepropertycares.com",
   hours: {
     weekdays: "Monday – Friday: 8:00 AM – 6:00 PM",
@@ -20,15 +20,15 @@ export const COMPANY = {
     sunday: "Sunday: Closed",
   },
   serviceArea: [
-    "Royal Palm Beach",
+    "Lake Worth",
     "West Palm Beach",
     "Wellington",
     "Palm Beach Gardens",
-    "Lake Worth",
+    "Royal Palm Beach",
     "Boynton Beach",
     "Delray Beach",
   ],
-  serviceRadius: "30-mile radius of Royal Palm Beach, FL",
+  serviceRadius: "30-mile radius of Lake Worth, FL",
   highlights: [
     "Licensed & Insured",
     "24/7 Emergency Services",
@@ -133,7 +133,7 @@ export const SERVICES = [
 export const FAQS = [
   {
     question: "What areas do you serve?",
-    answer: `We primarily serve Royal Palm Beach, FL and surrounding areas including West Palm Beach, Wellington, Palm Beach Gardens, Lake Worth, Boynton Beach, and Delray Beach — roughly a ${COMPANY.serviceRadius}. For locations outside these areas, contact us to discuss your needs.`,
+    answer: `We primarily serve Lake Worth, FL and surrounding areas including West Palm Beach, Wellington, Palm Beach Gardens, Royal Palm Beach, Boynton Beach, and Delray Beach — roughly a ${COMPANY.serviceRadius}. For locations outside these areas, contact us to discuss your needs.`,
     keywords: ["area", "serve", "location", "where", "city", "region", "zip", "near"],
   },
   {
@@ -221,7 +221,7 @@ export const RESPONSES: Record<string, { messages: string[]; quickReplies?: stri
   },
   location: {
     messages: [
-      `We're based in **Royal Palm Beach, FL** and serve a ${COMPANY.serviceRadius}:\n\n📍 ${COMPANY.serviceArea.join(", ")}\n\n🏢 Our office: ${COMPANY.address}\n\nDo you have a property in our service area?`,
+      `We're based in **Lake Worth, FL** and serve a ${COMPANY.serviceRadius}:\n\n📍 ${COMPANY.serviceArea.join(", ")}\n\n🏢 Our office: ${COMPANY.address}\n\nDo you have a property in our service area?`,
     ],
     quickReplies: ["Request a Service", "Contact Us", "Our Services"],
   },
@@ -233,7 +233,7 @@ export const RESPONSES: Record<string, { messages: string[]; quickReplies?: stri
   },
   about: {
     messages: [
-      `**Noble Property Care LLC** is a professional property maintenance and management company based in Royal Palm Beach, FL.\n\nWe specialize in rental property landscaping and commercial property maintenance. Our mission is to enhance the value and appeal of your properties with exceptional service, expert craftsmanship, and a commitment to excellence.\n\n✅ Licensed & Insured\n✅ 24/7 Emergency Services\n✅ Free Consultations\n✅ Customized Plans`,
+      `**Noble Property Care LLC** is a professional property maintenance and management company based in Lake Worth, FL.\n\nWe specialize in rental property landscaping and commercial property maintenance. Our mission is to enhance the value and appeal of your properties with exceptional service, expert craftsmanship, and a commitment to excellence.\n\n✅ Licensed & Insured\n✅ 24/7 Emergency Services\n✅ Free Consultations\n✅ Customized Plans`,
     ],
     quickReplies: ["Our Services", "Contact Us", "Request a Service"],
   },

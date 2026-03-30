@@ -155,9 +155,9 @@ export default function ContactPageClient() {
                   </div>
                   <div className="ml-4">
                     <h3 className="text-lg font-medium text-gray-900">Office</h3>
-                    <p className="mt-1 text-gray-600">11987 Southern Blvd. #1064</p>
-                    <p className="text-gray-600">Royal Palm Beach, FL 33411</p>
-                    <p className="mt-1 text-sm text-gray-500">Serving Royal Palm Beach and surrounding areas</p>
+                    <p className="mt-1 text-gray-600">3280 Lake Worth Rd #2</p>
+                    <p className="text-gray-600">Lake Worth, FL 33461</p>
+                    <p className="mt-1 text-sm text-gray-500">Serving Lake Worth and surrounding areas</p>
                   </div>
                 </div>
               </div>

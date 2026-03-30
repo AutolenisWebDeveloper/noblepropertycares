@@ -8,12 +8,12 @@ import { getFAQSchema, getBreadcrumbSchema } from "@/lib/schema"
 export const metadata: Metadata = {
   title: "About Noble Property Care | Your Trusted Property Maintenance Partner",
   description:
-    "Learn about Noble Property Care LLC, our story, core values, expert team, and commitment to excellence in property maintenance and management services in Royal Palm Beach, FL.",
+    "Learn about Noble Property Care LLC, our story, core values, expert team, and commitment to excellence in property maintenance and management services in Lake Worth, FL.",
   keywords: [
     "about Noble Property Care",
     "property maintenance company",
     "property management team",
-    "Royal Palm Beach property services",
+    "Lake Worth property services",
     "property care experts",
     "Florida property maintenance",
   ],
@@ -23,7 +23,7 @@ export const metadata: Metadata = {
   openGraph: {
     title: "About Noble Property Care | Your Trusted Property Maintenance Partner",
     description:
-      "Learn about Noble Property Care LLC, our story, core values, expert team, and commitment to excellence in property maintenance and management services in Royal Palm Beach, FL.",
+      "Learn about Noble Property Care LLC, our story, core values, expert team, and commitment to excellence in property maintenance and management services in Lake Worth, FL.",
     url: "https://noblepropertycares.com/about",
   },
 }
@@ -34,7 +34,7 @@ export default function AboutPage() {
     {
       question: "What areas do you serve?",
       answer:
-        "We primarily serve Royal Palm Beach, FL and surrounding areas including West Palm Beach, Wellington, Palm Beach Gardens, Lake Worth, Boynton Beach, and Delray Beach. For locations outside these areas, please contact us to discuss your specific needs.",
+        "We primarily serve Lake Worth, FL and surrounding areas including West Palm Beach, Wellington, Palm Beach Gardens, Royal Palm Beach, Boynton Beach, and Delray Beach. For locations outside these areas, please contact us to discuss your specific needs.",
     },
     {
       question: "How do you price your services?",
@@ -114,7 +114,7 @@ export default function AboutPage() {
               </p>
               <p className="mt-4 text-lg text-gray-600">
                 Founded with a vision to provide reliable, high-quality property care services, we have grown to become
-                a trusted partner for property owners, managers, and investors throughout Royal Palm Beach and
+                a trusted partner for property owners, managers, and investors throughout Lake Worth and
                 surrounding areas in Florida.
               </p>
               <p className="mt-4 text-lg text-gray-600">
@@ -355,8 +355,8 @@ export default function AboutPage() {
               <AccordionItem value="item-1">
                 <AccordionTrigger className="text-left">What areas do you serve?</AccordionTrigger>
                 <AccordionContent>
-                  We primarily serve Royal Palm Beach, FL and surrounding areas including West Palm Beach, Wellington,
-                  Palm Beach Gardens, Lake Worth, Boynton Beach, and Delray Beach. For locations outside these areas,
+                  We primarily serve Lake Worth, FL and surrounding areas including West Palm Beach, Wellington,
+                  Palm Beach Gardens, Royal Palm Beach, Boynton Beach, and Delray Beach. For locations outside these areas,
                   please contact us to discuss your specific needs.
                 </AccordionContent>
               </AccordionItem>

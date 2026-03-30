@@ -27,7 +27,7 @@ const pageAuditData = [
     url: "https://noblepropertycares.com/",
     title: "Noble Property Care LLC - Property Maintenance & Management",
     metaDescription:
-      "Your trusted partner in property maintenance and management services for residential homes, apartment complexes, and commercial properties in Royal Palm Beach, FL.",
+      "Your trusted partner in property maintenance and management services for residential homes, apartment complexes, and commercial properties in Lake Worth, FL.",
     h1: "Expert Rental Property Landscaping & Commercial Maintenance",
     wordCount: 1250,
     issues: [
@@ -40,7 +40,7 @@ const pageAuditData = [
     url: "https://noblepropertycares.com/services",
     title: "Professional Property Care Services | Landscaping, Maintenance & Cleaning",
     metaDescription:
-      "Explore our comprehensive property care services including rental property landscaping, commercial maintenance, janitorial cleaning, and residential property management in Royal Palm Beach, FL.",
+      "Explore our comprehensive property care services including rental property landscaping, commercial maintenance, janitorial cleaning, and residential property management in Lake Worth, FL.",
     h1: "Our Property Care Services",
     wordCount: 1850,
     issues: [
@@ -53,7 +53,7 @@ const pageAuditData = [
     url: "https://noblepropertycares.com/about",
     title: "About Noble Property Care | Your Trusted Property Maintenance Partner",
     metaDescription:
-      "Learn about Noble Property Care LLC, our story, core values, expert team, and commitment to excellence in property maintenance and management services in Royal Palm Beach, FL.",
+      "Learn about Noble Property Care LLC, our story, core values, expert team, and commitment to excellence in property maintenance and management services in Lake Worth, FL.",
     h1: "About Noble Property Care LLC",
     wordCount: 2100,
     issues: [],
@@ -63,7 +63,7 @@ const pageAuditData = [
     url: "https://noblepropertycares.com/contact",
     title: "Contact Noble Property Care | Request Property Maintenance Services",
     metaDescription:
-      "Contact Noble Property Care for professional property maintenance and management services in Royal Palm Beach, FL. Get in touch with our team for a consultation or service request.",
+      "Contact Noble Property Care for professional property maintenance and management services in Lake Worth, FL. Get in touch with our team for a consultation or service request.",
     h1: "Contact Us",
     wordCount: 650,
     issues: [

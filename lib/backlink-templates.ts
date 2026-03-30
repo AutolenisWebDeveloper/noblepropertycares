@@ -3,7 +3,7 @@ export const outreachTemplates = {
     subject: "Partnership Opportunity with Noble Property Care",
     email: `Dear [Contact Name],
 
-I hope this email finds you well. My name is [Your Name] from Noble Property Care, a professional property maintenance and management company serving Royal Palm Beach and surrounding areas.
+I hope this email finds you well. My name is [Your Name] from Noble Property Care, a professional property maintenance and management company serving Lake Worth and surrounding areas.
 
 I recently discovered [Website Name] and was impressed by the valuable resources you provide to the local community. Your directory of local businesses is particularly helpful for residents looking for trusted service providers.
 
@@ -34,7 +34,7 @@ Website: https://noblepropertycares.com`,
     subject: "Membership Inquiry - Noble Property Care",
     email: `Dear [Association Name] Team,
 
-I'm reaching out on behalf of Noble Property Care, a professional property maintenance and management company based in Royal Palm Beach, Florida.
+I'm reaching out on behalf of Noble Property Care, a professional property maintenance and management company based in Lake Worth, Florida.
 
 We're interested in becoming a member of [Association Name] to connect with industry peers, stay updated on best practices, and contribute to the advancement of the property management industry in Florida.
 
@@ -65,7 +65,7 @@ Website: https://noblepropertycares.com`,
     subject: "Expert Content Contribution for [Website Name]",
     email: `Dear [Editor Name],
 
-I hope this email finds you well. I'm [Your Name], [Your Position] at Noble Property Care, a professional property maintenance and management company serving Royal Palm Beach and surrounding areas in Florida.
+I hope this email finds you well. I'm [Your Name], [Your Position] at Noble Property Care, a professional property maintenance and management company serving Lake Worth and surrounding areas in Florida.
 
 I'm writing to propose a guest article for [Website Name] on a topic that I believe would be valuable to your audience of [target audience description].
 
@@ -144,7 +144,7 @@ Website: https://noblepropertycares.com`,
 
 export const directorySubmissionChecklist = [
   "Business name (Noble Property Care LLC)",
-  "Business address (11987 Southern Blvd. #1064, Royal Palm Beach, FL 33411)",
+  "Business address (3280 Lake Worth Rd #2, Lake Worth, FL 33461)",
   "Phone number (954-816-7872)",
   "Email address (frantz@noblepropertycares.com)",
   "Website URL (https://noblepropertycares.com)",

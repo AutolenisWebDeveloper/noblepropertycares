@@ -7,16 +7,16 @@ import type { Metadata } from "next"
 import { getServiceSchema } from "@/lib/schema"
 
 export const metadata: Metadata = {
-  title: "Expert Property Maintenance & Management Services in Royal Palm Beach, FL",
+  title: "Expert Property Maintenance & Management Services in Lake Worth, FL",
   description:
-    "Noble Property Care provides professional property maintenance, landscaping, and management services for residential and commercial properties in Royal Palm Beach and surrounding areas.",
+    "Noble Property Care provides professional property maintenance, landscaping, and management services for residential and commercial properties in Lake Worth and surrounding areas.",
   alternates: {
     canonical: "/",
   },
   openGraph: {
-    title: "Expert Property Maintenance & Management Services in Royal Palm Beach, FL",
+    title: "Expert Property Maintenance & Management Services in Lake Worth, FL",
     description:
-      "Noble Property Care provides professional property maintenance, landscaping, and management services for residential and commercial properties in Royal Palm Beach and surrounding areas.",
+      "Noble Property Care provides professional property maintenance, landscaping, and management services for residential and commercial properties in Lake Worth and surrounding areas.",
   },
 }
 
@@ -48,7 +48,7 @@ export default function Home() {
         <div className="absolute inset-0 overflow-hidden">
           <Image
             src="https://hebbkx1anhila5yf.public.blob.vercel-storage.com/Apartment%20Complex%20Landscaping-CY1RBIxS2OXzUar2FPv6dvsDrKWuMR.png"
-            alt="Beautiful apartment complex with professional landscaping in Royal Palm Beach, Florida"
+            alt="Beautiful apartment complex with professional landscaping in Lake Worth, Florida"
             fill
             className="object-cover opacity-20"
             priority
@@ -61,7 +61,7 @@ export default function Home() {
               Expert Rental Property Landscaping & Commercial Maintenance
             </h1>
             <p className="mt-4 sm:mt-6 text-lg sm:text-xl text-gray-200">
-              Serving Royal Palm Beach, FL & Surrounding Areas
+              Serving Lake Worth, FL & Surrounding Areas
             </p>
             <div className="mt-6 sm:mt-8 flex flex-col sm:flex-row gap-4">
               <Button asChild size="lg" className="bg-primary hover:bg-primary/90 text-white">
